@@ -11,8 +11,9 @@ set incsearch
 set ruler
 set virtualedit=all
 syntax on
+set number
 
 set backspace=indent,eol,start
 
-set cursorcolumn
+set cursorline
 

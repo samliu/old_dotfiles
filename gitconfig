@@ -1,9 +1,8 @@
 [user]
-	name = Will Leinweber
-	email = will@bitfission.com
+	name = Sam Liu
+	email = kajecounterhack@gmail.com
 [core]
-	excludesfile = /Users/will/.gitignore
-	editor = mate -w
+	excludesfile = /home/samliu/.gitignore
 [color]
 	diff = auto
 	status = auto
@@ -26,7 +25,7 @@
 	ci = commit
 	co = checkout
 [github]
-	user = will
+	user = samliu
 [branch]
 	autosetupmerge = true
 [apply]

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the
+ Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.
+
+-->
+
+<language id="jsp" _name="JSP" version="2.0" _section="Scripts">
+  <metadata>
+    <property name="mimetypes">text/x-jsp;application/x-asp;</property>
+    <property name="globs">*.jsp</property>
+    <property name="block-comment-start">&lt;!--</property>
+    <property name="block-comment-end">--&gt;</property>
+  </metadata>
+  <styles>
+    <style id="comment" _name="Comment" map-to="def:comment"/>
+    <style id="boolean" _name="Boolean value" map-to="def:boolean"/>
+    <style id="number" _name="Number" map-to="def:decimal"/>
+    <style id="operator" _name="Operator" map-to="def:operator"/>
+    <style id="element-name" _name="Element name" map-to="def:identifier"/>
+	<style id="error" _name="Error" map-to="def:error"/>
+    <style id="tag" _name="Tag"/>
+  </styles>
+
+  <definitions>
+  <define-regex id="prefix">[a-zA-Z_][a-zA-Z0-9._-]*</define-regex>
+  <define-regex id="name">[a-zA-Z_][a-zA-Z0-9.:_-]*</define-regex>
+	
+  <context id="comment" style-ref="comment">
+    <start>&lt;!--</start>
+    <end>--&gt;</end>
+ </context>
+
+
+  <context id="boolean" style-ref="boolean">
+    <keyword>false</keyword>
+    <keyword>true</keyword>
+  </context>
+
+  <context id="numeric" style-ref="number">
+    <match extended="true">
+      (\b([0-9]+|0[xX][0-9a-fA-F]+)[Ll]?\b|
+      \b(([0-9]+[Ee][-]?[0-9]+|
+      ([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-]?[0-9]+)?)[fFdD]?|
+      [0-9]+[FfDd]))
+   </match>
+  </context>
+
+  <context id="operators" style-ref="operator" extend-parent="false">
+    <match>[-:/\=\+\*&amp;&lt;&gt;]</match>
+  </context>
+
+  <context id="declaration" style-ref="tag">
+    <start>&lt;%!</start>
+    <end>%&gt;</end>
+      <include>
+        <context ref="java:java"/>
+      </include>
+  </context>
+
+  <context id="expressions" style-ref="tag">
+    <start>&lt;%=</start>
+    <end>%&gt;</end>
+      <include>
+        <context ref="java:java"/>
+      </include>
+  </context>
+
+  <context id="scriplet" style-ref="tag">
+    <start>&lt;%</start>
+    <end>%&gt;</end>
+      <include>
+        <context ref="java:java"/>
+      </include>
+  </context>
+  
+  <context id="jsp">
+   <include>
+     <context ref="comment"/>
+     <context ref="html:html"/>
+     <context ref="java:java"/>
+     <context ref="boolean"/>
+     <context ref="numeric"/>
+     <context ref="operators"/>
+     <context ref="declaration"/>
+     <context ref="expressions"/>
+     <context ref="scriplet"/>
+   </include>
+  </context>
+
+  </definitions>
+</language>

@@ -1,8 +1,9 @@
 [user]
 	name = Sam Liu
-	email = kajecounterhack@gmail.com
+	email = sam@ambushnetworks.com
 [core]
 	excludesfile = /home/samliu/.gitignore
+	editor = gvim -f
 [color]
 	diff = auto
 	status = auto

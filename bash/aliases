@@ -3,5 +3,8 @@
 # changing directory to code project
 function c { cd ~/code/$1; }
 
+#start etherpad
+function pad { sudo sh /usr/share/etherpad/bin/run.sh;}
+
 # misc
 alias reload='. ~/.bash_profile'

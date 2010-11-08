@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/liferay/code/liferay-portal-packaging/pkg-java/trunk/liferay-portal'
-let g:netrw_dirhist_2='/home/liferay/code/liferay-portal-packaging/pkg-java/trunk/liferay-portal/debian'
-let g:netrw_dirhist_3='/home/liferay/code/trunk-old/projects/liferay.public/portal/trunk/portal-web/docroot/html/portlet/wiki/import'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/samliu/code/CS232_MP5'

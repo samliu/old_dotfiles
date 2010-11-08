@@ -1,6 +1,9 @@
 # cd
 alias ..='cd ..'
 
+#etherpad
+alias pad='sudo bash /usr/share/etherpad/bin/run.sh'
+
 # ls
 alias ls="ls -F"
 alias l="ls -lAh"

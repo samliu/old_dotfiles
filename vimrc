@@ -1,16 +1,19 @@
 set nocompatible
 set autoindent
 set smartindent
+
+set expandtab
+set tabstop=2
 " temporarily removing my tab settings for liferay...grump
-" set expandtab
-" set tabstop=2
-set tabstop=4
+" set tabstop=4
 set shiftwidth=2
 set showcmd
 
 set showmatch
 set ignorecase
 set incsearch
+set nohlsearch
+
 
 set ruler
 set virtualedit=all

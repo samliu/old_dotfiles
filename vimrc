@@ -2,10 +2,11 @@ set nocompatible
 set autoindent
 set smartindent
 
+filetype indent on
+set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
+
 set expandtab
 set tabstop=2
-" temporarily removing my tab settings for liferay...grump
-" set tabstop=4
 set shiftwidth=2
 set showcmd
 

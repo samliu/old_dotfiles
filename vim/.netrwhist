@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/samliu/code/CS232_MP5'
+let g:netrw_dirhist_2='/etc/etherpad'
+let g:netrw_dirhist_3='/var/run/couchdb'
+let g:netrw_dirhist_4='/var/run'
+let g:netrw_dirhist_5='/home/samliu/code/railstutorial/sample_app/app/views/layouts'

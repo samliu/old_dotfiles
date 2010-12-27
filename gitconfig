@@ -2,7 +2,7 @@
 	name = Sam Liu
 	email = sam@ambushnetworks.com
 [core]
-	excludesfile = /home/samliu/.gitignore
+	excludesfile = /Users/samliu/.gitignore
 	editor = gvim -f
 [color]
 	diff = auto

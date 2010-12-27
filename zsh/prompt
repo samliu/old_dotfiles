@@ -1,7 +1,7 @@
 # prompt
 if [ "${TERM}" != "dumb" ] ; then
 	if [ -z "${SSH_TTY}" ] ; then
-		PROMPT=$'%{\e[00;00m%}%{\e[01;32m%}%n@%m %{\e[01;34m%}%~ %(?..%{\e[01;31m%})%(!.#.$) %{\e[00;00m%}'
+		PROMPT=$'%{\e[00;00m%}%{\e[01;32m%}%n@%m %{\e[01;34m%}%~$(git_info_for_prompt)%(?..%{\e[01;31m%})%(!.#.$) %{\e[00;00m%}'
 	else
 		PROMPT=$'%{\e[00;00m%}%{\e[01;36m%}%n@%m %{\e[01;34m%}%~$(git_info_for_prompt)%(?..%{\e[01;31m%})%(!.#.$) %{\e[00;00m%}'
 	fi

@@ -5,13 +5,11 @@ ORANGE=$'\e[33;40m'
 RED=$'\e[1;31;40m'
 CR=$'\e[0;40m'
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='${RED}%n ${CR}on ${ORANGE}%m${CR}:%3~${PINK}$(git_info_for_prompt) ${CR}%#'
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
-
-export RPROMPT='$(battery_charge)'
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export PS1='%n on %M:%3~$(git_info_for_prompt)%# '
+#else
+#  export PS1='%3~$(git_info_for_prompt)%# '
+#fi
 
 export EDITOR='vim'
 export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH:/home/samliu/code/jruby/bin"

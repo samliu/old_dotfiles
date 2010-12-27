@@ -34,6 +34,7 @@ set nofoldenable
 set foldlevel=1
 
 colorscheme koehler
+"colorscheme desert256
 
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript

@@ -1,4 +1,6 @@
 gem: --no-ri --no-rdoc
+install: --no-ri --no-rdoc
+update: --no-ri --no-rdoc
 :sources: 
 - http://gems.rubyforge.org
 - http://gems.github.com/

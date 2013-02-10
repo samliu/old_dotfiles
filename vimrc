@@ -5,8 +5,8 @@ set smartindent
 filetype indent on
 
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set showcmd
 
 set showmatch
@@ -32,7 +32,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
-colorscheme koehler
+set t_Co=256
+colorscheme ir_black
+set guifont=Ubuntu\ Mono\ Bold\ 12
 "colorscheme desert256
 
 au BufNewFile,BufRead *.mxml set filetype=mxml

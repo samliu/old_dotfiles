@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/samliu/code/CS232_MP5'
-let g:netrw_dirhist_2='/etc/etherpad'
-let g:netrw_dirhist_3='/var/run/couchdb'
-let g:netrw_dirhist_4='/var/run'
-let g:netrw_dirhist_5='/home/samliu/code/railstutorial/sample_app/app/views/layouts'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/samliu/code/snapcache/snapcache-web-interface/assets'
+let g:netrw_dirhist_2='/home/samliu/code/snapcache/snapcache-web-interface/assets/js'
+let g:netrw_dirhist_3='/home/samliu/code/snapcache/snapcache-web-interface'
+let g:netrw_dirhist_4='/home/samliu/code/snapcache/snapcache-web-interface/assets'
+let g:netrw_dirhist_5='/home/samliu/code/snapcache/snapcache-web-interface/assets/js'
+let g:netrw_dirhist_6='/home/samliu/code/snapcache/snapcache-web-interface'
+let g:netrw_dirhist_7='/home/samliu/code/snapcache/snapcache-web-interface/assets'
+let g:netrw_dirhist_8='/home/samliu/code/snapcache/snapcache-web-interface/assets/js'

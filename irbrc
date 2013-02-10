@@ -1,8 +1,11 @@
 #!/usr/bin/ruby
-require 'irb/completion'
-require 'irb/ext/save-history'
-require 'rubygems'
-require 'looksee/shortcuts'
+begin
+  require 'irb/completion'
+  require 'irb/ext/save-history'
+  require 'rubygems'
+  require 'interactive_editor'
+rescue LoadError
+end
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
@@ -16,7 +19,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'

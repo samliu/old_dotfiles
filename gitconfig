@@ -15,9 +15,9 @@
 	remote = green
 [color "diff"]
 	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	frag = magenta
+	old = red
+	new = green
 [color "status"]
 	added = yellow
 	changed = green
@@ -25,9 +25,26 @@
 [alias]
 	ci = commit
 	co = checkout
+  logl = log --pretty=oneline --abbrev-commit --decorate
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %f %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+  unadd = update-index --force-remove
+  ls = !git ls-files -m | xargs ls -la
 [github]
 	user = samliu
 [branch]
 	autosetupmerge = true
 [apply]
 	whitespace = nowarn
+[merge "gemfilelock"]
+  name = relocks the gemfile.lock
+  driver = bundle lock
+[push]
+	default = tracking
+[advice]
+	statusHints = false
+[diff]
+	mnemonicprefix = true
+[rerere]
+	enabled = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"

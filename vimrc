@@ -31,7 +31,7 @@ else
   set background=dark
 endif
 syntax on
-colorscheme solarized
+colorscheme ir_black
 
 " search
 set showmatch

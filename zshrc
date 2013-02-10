@@ -5,7 +5,6 @@
 #. ~/.zsh/prompt
 #
 ## use .localrc for settings specific to one system
-#[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 #[[ -f ~/.localrc ]] && .  ~/.localrc
 #
 
@@ -29,7 +28,8 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(heroku autojump git danger brew gem rvm c zsh-syntax-highlighting)
+# Note from sam: I disabled autojump since this is for linux
+plugins=(heroku git danger brew gem rvm c zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 source $ZSH/oh-my-zsh.sh
@@ -42,7 +42,12 @@ export PGDATA=/usr/local/var/postgres
 export PSQL_EDITOR="vim -c ':set ft=sql'"
 
 if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
-eval "$(rbenv init -)"
+
+# Uncomment this if you want to use rbenv.
+# eval "$(rbenv init -)"
+
+# Uncomment this if you want to use RVM.
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Default virtualenv
 if [ -d "$HOME/virtualenvs/default/bin" ]; then

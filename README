@@ -17,6 +17,7 @@ Random Things
     virtualenv
     rvm
     exuberant-ctags
+    vim compiled with python bindings
 
 
 Installation

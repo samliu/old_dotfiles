@@ -2,7 +2,8 @@ set nocompatible
 set showcmd
 set ttyfast
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+filetype plugin on
 
 " map tab to autocomplete
 imap <Tab> <C-P>
@@ -20,9 +21,9 @@ set smartindent
 filetype indent on
 
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " colors
 if has('gui_running')

@@ -2,6 +2,8 @@ alias irb='pry'
 alias grep="grep -i"
 alias psg="ps auxwwww | grep -v grep | grep"
 
+alias cls='printf "\033c"'
+
 alias ss="script/server"
 alias sc="script/console"
 
